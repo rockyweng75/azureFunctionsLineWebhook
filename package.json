@@ -1,0 +1,16 @@
+{
+  "name": "linewebhook",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "scripts": {
+    "dev": "node ./local/server.js",
+    "ngrok": "ngrok http 3000"
+  },
+  "dependencies": {
+    "@azure/functions": "^3.0.0",
+    "@line/bot-sdk": "^7.4.0",
+    "crypto": "^1.0.1",
+    "express": "^4.17.2"
+  }
+}
