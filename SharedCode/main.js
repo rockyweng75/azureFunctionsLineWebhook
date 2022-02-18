@@ -1,7 +1,6 @@
 const handleMessage = require('./handleMessage');
 
 module.exports = async function (event) {
-
     if(event.type === 'postback'){
 
     } else if (event.type === 'message'){

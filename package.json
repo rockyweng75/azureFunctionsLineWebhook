@@ -10,6 +10,7 @@
   "dependencies": {
     "@azure/functions": "^3.0.0",
     "@line/bot-sdk": "^7.4.0",
+    "axios": "^0.21.4",
     "crypto": "^1.0.1",
     "express": "^4.17.2"
   }

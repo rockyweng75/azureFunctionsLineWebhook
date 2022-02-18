@@ -4,6 +4,6 @@ const lineClient = require('./lineClient');
 
 module.exports = async function (event) {
     var type = await decideMessage(event.message);
-    var msg = await replyMessage(type);
+    var msg = await replyMessage(type, event.message);
     lineClient.replyMessage(event.replyToken, msg);
 }

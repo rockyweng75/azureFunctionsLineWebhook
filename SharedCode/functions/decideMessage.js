@@ -1,20 +1,22 @@
-const orderKeywords = ['菜單', 'O']
-const helpKeywords = ['指令', 'I', 'HELP', '幫助']
-
-const welcomeKeywords = ['你好', '妳好', '您好', '早安', '午安', '晚安', '貴安', 'HI', 'HELLO']
-const callAdminKeywords = ['客服']
+const order = require('../keywords/order');
+const callAdmin = require('../keywords/callAdmin');
+const welcome = require('../keywords/welcome');
+const help = require('../keywords/help');
+const query = require('../keywords/query');
 
 module.exports = async function (message) {
     if(message.type === 'text'){
         var input = message.text.toUpperCase();
-        if(orderKeywords.indexOf(input) >= 0){
+        if(order.indexOf(input) >= 0 || input == "O"){
             return Promise.resolve("order");
-        } else if(welcomeKeywords.indexOf(input) >= 0){
+        } else if(welcome.indexOf(input) >= 0){
             return Promise.resolve("welcome");
-        } else if(callAdminKeywords.indexOf(input) >= 0){
+        } else if(callAdmin.indexOf(input) >= 0){
             return Promise.resolve("callAdmin");
-        } else if(helpKeywords.indexOf(input) >= 0){
+        } else if(help.indexOf(input) >= 0 || input == "I"){
             return Promise.resolve("help");
+        } else if(query.indexOf(input) >= 0 || input.substring(0, 1) == "Q"){
+            return Promise.resolve("query");
         } else {
             return Promise.resolve(null);
         }

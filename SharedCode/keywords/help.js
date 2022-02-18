@@ -1,0 +1,1 @@
+module.exports = ['指令', 'HELP', '幫助']
