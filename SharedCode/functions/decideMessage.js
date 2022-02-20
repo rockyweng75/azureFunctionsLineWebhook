@@ -15,10 +15,8 @@ module.exports = async function (message) {
             return Promise.resolve("callAdmin");
         } else if(help.indexOf(input) >= 0 || input == "I"){
             return Promise.resolve("help");
-        } else if(query.indexOf(input) >= 0 || input.substring(0, 1) == "Q"){
-            return Promise.resolve("query");
         } else {
-            return Promise.resolve(null);
+            return Promise.resolve("query");
         }
     } else {
         return Promise.resolve(null);

@@ -50,7 +50,40 @@ module.exports =
                 "contents": []
                 },
                 {
-                "type": "separator"
+                    "type": "separator"
+                },
+                {
+                    "type": "text",
+                    "text": "油價",
+                    "size": "md",
+                    "flex": 2,
+                    "gravity": "center",
+                    "contents": []
+                },
+                {
+                    "type": "separator"
+                },
+                {
+                    "type": "text",
+                    "text": "天氣",
+                    "size": "md",
+                    "flex": 2,
+                    "gravity": "center",
+                    "contents": []
+                },
+                {
+                    "type": "separator"
+                },
+                {
+                    "type": "text",
+                    "text": "大盤",
+                    "size": "md",
+                    "flex": 2,
+                    "gravity": "center",
+                    "contents": []
+                },
+                {
+                    "type": "separator"
                 },
                 {
                 "type": "text",
@@ -60,6 +93,7 @@ module.exports =
                 "gravity": "center",
                 "contents": []
                 },
+
             ]
             }
         ]
