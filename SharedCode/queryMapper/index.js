@@ -198,7 +198,10 @@ const clearKeyword = (text, keywords) =>{
 }
 
 const findKeyByChineseRule = (text, keywords) =>{
-  var result = keywords.filter(o => text.indexOf(o) >= 0);
+  var result = keywords.filter(o => {
+      if(o.length < text.length) return text.indexOf(o) >= 0;
+      else return o.indexOf(text) >= 0;
+  });
   return result.length > 0 ? result[0] : null;
 }
 
